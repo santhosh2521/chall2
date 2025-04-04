@@ -7,10 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 
 var app = express();
-app.set('static',path.join(__dirname, 'static')) //serving static files always use this
+app.use('/static',express.static(path.join(__dirname, 'static'))) //serving static files always use this
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());

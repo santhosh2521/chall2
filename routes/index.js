@@ -32,7 +32,7 @@ router.post('/register',function(req,res,next) //when users register
 router.post('/',function(req,res,next) //when users login
 {
       console.log(req.body);
-      console.log(req.cookies);
+      console.log(req.cookies.user);
       if(req.body.username===''|| req.body.password==='' || !req.cookies.user)
       {
         res.status(500).send(response("Something's wrong!! Try again"));
