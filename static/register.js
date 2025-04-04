@@ -38,7 +38,7 @@ form.addEventListener('submit', e => {
         }
         
         flash(result, 'success');
-
+        
         setTimeout(() => {
             document.getElementById('closeAlert').click();
             window.location.href = '/';

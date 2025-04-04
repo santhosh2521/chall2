@@ -26,7 +26,7 @@ form.addEventListener('submit', e => {
 		return resp.json();
 	}).then(resp => {
         result = resp.message.toString();
-
+        console.log(result);
 		if (result.includes('wrong')) {
             flash(result, 'danger');
 
@@ -41,17 +41,6 @@ form.addEventListener('submit', e => {
 
         setTimeout(() => {
             document.getElementById('closeAlert').click();
-            if(result.includes('admin'))
-            {
-                window.location.href = '/admin';
-            }
-            else
-            {
-                window.location.href = '/user';
-            }
         }, 2000);
-            
-        output.value = result;
-        
     })
 });
