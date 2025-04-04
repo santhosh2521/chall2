@@ -41,6 +41,10 @@ form.addEventListener('submit', e => {
 
         setTimeout(() => {
             document.getElementById('closeAlert').click();
+            window.location.href = '/user';
         }, 2000);
+            
+        output.value = result;
+        
     })
 });
