@@ -14,7 +14,6 @@ router.get('/', function(req, res, next) { //to see login page
 
 router.post('/',function(req,res,next) //when users login
 {
-      console.log(req.body);
       if(req.body.username===''|| req.body.password==='')
       {
         res.status(500).send(response("Something's wrong!! Try again"));
